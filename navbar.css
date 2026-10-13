@@ -1,0 +1,230 @@
+/* Simple, clean navbar with modern tactile polish */
+:root { --nav-h: 64px; }
+
+#navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--nav-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  color: var(--nav-fg);
+  border-bottom: 1px solid var(--nav-border);
+  box-shadow: var(--shadow-sm);
+  min-height: var(--nav-h);
+  transition: background-color var(--transition-normal), border-color var(--transition-normal);
+}
+
+.nav__inner {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 clamp(1rem, 3vw, 1.5rem);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: var(--nav-h);
+}
+
+/* Brand */
+.nav__brand {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  font-weight: 800;
+  font-size: 1.1rem;
+  letter-spacing: -0.01em;
+  text-decoration: none;
+  color: var(--fg);
+  transition: opacity var(--transition-fast);
+}
+
+.nav__brand:hover {
+  text-decoration: none;
+  opacity: 0.9;
+}
+
+.nav__brand-logo {
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-sm);
+  object-fit: cover;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+}
+
+/* Navigation menu */
+.nav__menu {
+  list-style: none;
+  margin: 0;
+  padding: 1rem 0;
+  display: none;
+  position: fixed;
+  top: var(--nav-h);
+  left: 0;
+  right: 0;
+  bottom: 0;
+  flex-direction: column;
+  gap: 0.25rem;
+  background: var(--nav-bg);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  overflow-y: auto;
+  transform: translateX(-100%);
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 99;
+  border-top: 1px solid var(--nav-border);
+}
+
+.nav__menu.open {
+  display: flex;
+  transform: translateX(0);
+}
+
+.nav__link {
+  display: flex;
+  align-items: center;
+  padding: 0.85rem 1.5rem;
+  color: var(--muted);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  border-radius: var(--radius-md);
+  transition: color var(--transition-fast), background var(--transition-fast);
+}
+
+.nav__link:hover {
+  background: var(--nav-hover);
+  color: var(--fg);
+  text-decoration: none;
+}
+
+.nav__link.active {
+  color: var(--brand);
+  background: var(--brand-subtle);
+  font-weight: 700;
+}
+
+/* Controls: burger + theme button */
+.nav__controls {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.nav__toggle {
+  background: transparent;
+  border: 1px solid var(--nav-border);
+  color: var(--fg);
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  padding: 0;
+  transition: background var(--transition-fast), border-color var(--transition-fast);
+}
+
+.nav__toggle:hover {
+  background: var(--nav-hover);
+  border-color: var(--brand);
+}
+
+.nav__toggle span {
+  width: 18px;
+  height: 2px;
+  background: currentColor;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+  border-radius: 1px;
+}
+
+/* Toggle icon X animation */
+.nav__toggle[aria-expanded="true"] span:nth-child(1) {
+  transform: translateY(6px) rotate(45deg);
+}
+
+.nav__toggle[aria-expanded="true"] span:nth-child(2) {
+  opacity: 0;
+}
+
+.nav__toggle[aria-expanded="true"] span:nth-child(3) {
+  transform: translateY(-6px) rotate(-45deg);
+}
+
+/* Theme button */
+.nav__theme-btn {
+  background: transparent;
+  border: 1px solid var(--nav-border);
+  color: var(--fg);
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background var(--transition-fast), border-color var(--transition-fast), transform var(--transition-fast);
+}
+
+.nav__theme-btn:hover {
+  background: var(--nav-hover);
+  border-color: var(--brand);
+  transform: scale(1.04);
+}
+
+.nav__theme-btn:active {
+  transform: scale(0.96);
+}
+
+/* Desktop navigation */
+@media (min-width: 768px) {
+  .nav__toggle {
+    display: none;
+  }
+
+  .nav__menu {
+    position: static;
+    display: flex !important;
+    flex-direction: row;
+    top: auto;
+    left: auto;
+    right: auto;
+    bottom: auto;
+    background: transparent;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    transform: none;
+    border: none;
+    margin-left: auto;
+    gap: 0.35rem;
+    padding: 0;
+    overflow: visible;
+    z-index: auto;
+  }
+
+  .nav__link {
+    padding: 0.45rem 0.95rem;
+    border: none;
+    border-radius: var(--radius-md);
+    height: auto;
+    font-size: 0.92rem;
+  }
+
+  .nav__link:hover {
+    background: var(--nav-hover);
+  }
+
+  .nav__link.active {
+    color: var(--brand);
+    background: var(--brand-subtle);
+  }
+}

@@ -1,0 +1,250 @@
+/* Base page styles */
+:root {
+  /* Light theme (default) - Modern Security Minimalism */
+  --bg: #f8fafc;         /* Slate-50 clean, luminous background */
+  --fg: #0f172a;         /* Slate-900 high-contrast readable foreground */
+  --muted: #475569;      /* Slate-600 comfortable, high-legibility secondary text */
+  --muted-light: #94a3b8;/* Slate-400 subtle helper text */
+  /* Letterbox color for media containers (light) */
+  --media-letterbox: #0f172a;
+
+  /* Design System: core tokens */
+  --brand: #1d4ed8;      /* Royal blue-700 authoritative security blue */
+  --brand-hover: #1e40af;/* Deep blue-800 for tactile hover states */
+  --brand-subtle: #eff6ff;/* Tinted blue-50 for badges and subtle pills */
+  --accent: #0284c7;     /* Sky-600 technical precision accent */
+  --ring: #2563eb;       /* Blue-600 sharp accessible focus ring */
+  --ok: #059669;         /* Emerald-600 success states */
+  --error: #dc2626;      /* Red-600 error states */
+  --card: #ffffff;       /* Pure white card surfaces */
+  --card-elevated: #ffffff;
+  --border: #e2e8f0;     /* Slate-200 crisp, refined hairline border */
+  --border-focus: #3b82f6;
+
+  /* Geometry & Spacing */
+  --radius-xs: 4px;
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --radius-xl: 20px;
+  --radius-full: 9999px;
+
+  /* Shadows - subtle, layered, non-muddy */
+  --shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.05);
+  --shadow-md: 0 4px 16px -2px rgba(15, 23, 42, 0.08), 0 2px 6px -1px rgba(15, 23, 42, 0.04);
+  --shadow-lg: 0 12px 32px -4px rgba(15, 23, 42, 0.12), 0 4px 12px -2px rgba(15, 23, 42, 0.06);
+
+  /* Transitions */
+  --transition-fast: 0.15s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-normal: 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* Navigation tokens (shared) */
+  --nav-bg: rgba(255, 255, 255, 0.88);
+  --nav-fg: var(--fg);
+  --nav-accent: var(--accent);
+  --nav-border: var(--border);
+  --nav-hover: #f1f5f9;
+
+  /* Let form controls etc. adapt */
+  color-scheme: light;
+}
+
+:root[data-theme="dark"] {
+  /* Dark theme - Deep Onyx with Slate Blue undertones */
+  --bg: #090d16;          /* Deep obsidian midnight base */
+  --fg: #f1f5f9;          /* Slate-100 crisp readability */
+  --muted: #94a3b8;       /* Slate-400 clear contrast */
+  --muted-light: #64748b; /* Slate-500 subtle helper text */
+  /* Letterbox color for media containers (dark) */
+  --media-letterbox: #050811;
+
+  /* Design System overrides (dark) */
+  --brand: #3b82f6;       /* Blue-500 vibrant security blue in dark mode */
+  --brand-hover: #60a5fa; /* Blue-400 lightened hover */
+  --brand-subtle: rgba(37, 99, 235, 0.12);
+  --accent: #38bdf8;      /* Sky-400 precision accent */
+  --ring: #60a5fa;        /* Blue-400 */
+  --ok: #34d399;          /* Emerald-400 */
+  --error: #f87171;       /* Red-400 */
+  --card: #0f172a;        /* Slate-900 surface */
+  --card-elevated: #151f38;
+  --border: #1e293b;      /* Slate-800 refined borders */
+  --border-focus: #60a5fa;
+
+  --nav-bg: rgba(11, 15, 25, 0.88);
+  --nav-fg: var(--fg);
+  --nav-accent: var(--accent);
+  --nav-border: var(--border);
+  --nav-hover: rgba(255, 255, 255, 0.06);
+
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 6px 20px -2px rgba(0, 0, 0, 0.5), 0 2px 6px -1px rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 16px 40px -4px rgba(0, 0, 0, 0.65);
+
+  color-scheme: dark;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  color: var(--fg);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Smooth scrolling and offset for sticky navbar */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--nav-h) + 16px);
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+/* Section spacing with purposeful visual rhythm */
+.section { 
+  padding: clamp(2.5rem, 6vw, 4.5rem) 0; 
+}
+
+/* Fluid responsive typography with strong editorial hierarchy */
+h1 { 
+  font-size: clamp(2rem, 5.5vw, 3.4rem); 
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+  margin: 0 0 1rem; 
+}
+
+h2 { 
+  font-size: clamp(1.6rem, 4vw, 2.35rem); 
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  line-height: 1.22;
+  margin: 0 0 0.85rem;
+  color: var(--fg);
+}
+
+h3 { 
+  font-size: clamp(1.15rem, 2.5vw, 1.45rem); 
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  line-height: 1.3;
+  margin: 0 0 0.5rem;
+}
+
+h4 {
+  font-size: clamp(0.95rem, 2vw, 1.1rem);
+  font-weight: 700;
+  line-height: 1.35;
+  margin: 0;
+}
+
+p { 
+  line-height: 1.65; 
+  color: inherit; 
+  margin: 0;
+}
+
+/* Responsive spacing */
+@media (max-width: 479.98px) {
+  .section { padding: 2rem 0; }
+  .container { padding: 0 1rem; }
+}
+
+@media (min-width: 480px) and (max-width: 767.98px) {
+  .section { padding: 2.75rem 0; }
+}
+
+@media (min-width: 768px) {
+  .section { padding: 3.75rem 0; }
+}
+
+/* Global links */
+a { color: var(--brand); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* Consistent focus ring */
+:focus-visible {
+  outline: 2px solid color-mix(in srgb, var(--ring) 70%, transparent);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}
+
+/* Accessibility: Skip to main content bypass link */
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 16px;
+  background: var(--brand);
+  color: #ffffff;
+  padding: 0.75rem 1.25rem;
+  border-radius: var(--radius-sm);
+  font-weight: 700;
+  font-size: 0.95rem;
+  z-index: 9999;
+  text-decoration: none;
+  box-shadow: var(--shadow-md);
+  transition: top 0.15s ease-out;
+}
+.skip-link:focus {
+  top: 16px;
+  outline: 2px solid #ffffff;
+  outline-offset: 2px;
+}
+
+/* Floating back-to-top button */
+.fab-top {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  z-index: 60;
+  background: var(--nav-bg);
+  color: inherit;
+  border: 1px solid var(--nav-border);
+  border-radius: 999px;
+  padding: .55rem .7rem;
+  box-shadow: var(--shadow-sm);
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(8px);
+  transition: opacity .2s ease, transform .2s ease, visibility .2s ease;
+}
+.fab-top.show {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+/* Accessibility: screen reader only utility */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Accessibility: respect reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+

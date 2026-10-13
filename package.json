@@ -1,0 +1,25 @@
+{
+  "name": "static-seia",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "SEIA Security Installation Services - Portfolio and Website",
+  "scripts": {
+    "dev": "node server.js",
+    "start": "node server.js",
+    "build": "node scripts/stitch-components.mjs --write",
+    "lint": "node -c server.js",
+    "test": "node --test",
+    "stitch:components": "node scripts/stitch-components.mjs --write",
+    "stitch:components:dry": "node scripts/stitch-components.mjs --dry-run",
+    "validate:schema": "node scripts/validate-portfolio-schema.mjs",
+    "validate:fallback": "node scripts/validate-fallback-consistency.mjs \"--ignore=bag-bag-novaliches-qc-(4-lines)\"",
+    "verify:cloudinary": "node scripts/verify-cloudinary-mapping.mjs",
+    "sync:portfolio": "node scripts/sync-cloudinary-portfolio.mjs",
+    "sync:portfolio:dry": "node scripts/sync-cloudinary-portfolio.mjs --dry-run",
+    "scaffold:portfolio": "node scripts/scaffold-new-project.mjs",
+    "scaffold:portfolio:write": "node scripts/scaffold-new-project.mjs --write"
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}

@@ -1,0 +1,161 @@
+/* Hero section with Modern Security Minimalism aesthetic */
+:root { --hero-h: clamp(380px, 60vh, 620px); }
+
+.hero {
+  position: relative;
+  isolation: isolate;
+  min-height: var(--hero-h);
+  display: grid;
+  place-items: center;
+  text-align: center;
+  overflow: hidden;
+  padding: clamp(3rem, 7vw, 5rem) 1rem;
+}
+
+.hero__bg {
+  position: absolute;
+  inset: 0;
+  background: url('images/cover.jpg') center/cover no-repeat;
+  z-index: -2;
+  filter: brightness(0.9) saturate(1.05);
+  transform: scale(1.02);
+  transition: transform 1.2s ease-out;
+}
+
+/* Subtle, authoritative perimeter-tinted overlay for maximum readability */
+.hero__overlay {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(180deg, 
+    rgba(10, 15, 30, 0.78) 0%,
+    rgba(15, 23, 42, 0.86) 60%,
+    rgba(9, 13, 22, 0.94) 100%);
+}
+
+:root[data-theme="dark"] .hero__overlay { 
+  background: linear-gradient(180deg, 
+    rgba(5, 8, 18, 0.84) 0%,
+    rgba(9, 13, 22, 0.92) 60%,
+    rgba(5, 8, 16, 0.98) 100%);
+}
+
+.hero__inner {
+  max-width: 880px;
+  margin: 0 auto;
+  color: #ffffff;
+}
+
+.hero__kicker { 
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: clamp(0.72rem, 1.6vw, 0.82rem); 
+  letter-spacing: 0.16em; 
+  text-transform: uppercase; 
+  font-weight: 700;
+  color: #93c5fd; /* Soft accessible security blue */
+  background: rgba(30, 58, 138, 0.35);
+  border: 1px solid rgba(147, 197, 253, 0.28);
+  padding: 0.35rem 0.95rem;
+  border-radius: var(--radius-full);
+  margin-bottom: clamp(0.85rem, 2vw, 1.25rem);
+  backdrop-filter: blur(8px);
+}
+
+.hero__title { 
+  font-size: clamp(2.1rem, 6.5vw, 3.8rem); 
+  margin: 0;
+  line-height: 1.1; 
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: #ffffff;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+}
+
+.hero__subtitle { 
+  font-size: clamp(1rem, 2.5vw, 1.25rem); 
+  color: rgba(255, 255, 255, 0.9);
+  max-width: 62ch; 
+  margin: clamp(1rem, 2.5vw, 1.5rem) auto 0;
+  line-height: 1.65;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  font-weight: 400;
+}
+
+.hero__actions {
+  margin-top: clamp(1.5rem, 4vw, 2.5rem);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(0.75rem, 2vw, 1.25rem);
+}
+
+.hero__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #2563eb;
+  color: #ffffff;
+  border: 1px solid #3b82f6;
+  border-radius: var(--radius-md);
+  padding: clamp(0.75rem, 1.8vw, 0.95rem) clamp(1.4rem, 3vw, 2rem);
+  font-size: clamp(0.92rem, 1.8vw, 1.05rem);
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  box-shadow: 0 4px 18px rgba(37, 99, 235, 0.4);
+}
+
+.hero__btn:hover {
+  background: #1d4ed8;
+  border-color: #60a5fa;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(37, 99, 235, 0.55);
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.hero__btn:active { 
+  transform: translateY(0);
+}
+
+.hero__btn:focus-visible { 
+  outline: 2px solid #ffffff; 
+  outline-offset: 3px; 
+}
+
+.hero__btn--ghost {
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(8px);
+}
+
+.hero__btn--ghost:hover { 
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.65);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.hero__btn--ghost:active { 
+  transform: translateY(0);
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .hero__bg {
+    transition: none;
+    transform: none;
+  }
+  .hero__btn {
+    transition: none;
+    transform: none;
+  }
+}

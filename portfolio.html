@@ -1,0 +1,110 @@
+<section class="portfolio">
+  <div class="container portfolio__inner">
+    <header class="portfolio__header">
+      <div class="portfolio__header-text">
+        <h2 class="portfolio__title">Portfolio of Work</h2>
+        <p class="portfolio__blurb">Verified electric fence and perimeter security installations across residential, commercial, and provincial properties.</p>
+      </div>
+      <div class="portfolio__toolbar" aria-label="Filter and sort projects">
+        <div class="portfolio__filters" role="group" aria-label="Filter projects">
+          <div class="pf-field">
+            <label class="pf-label" for="pfProject">Solution</label>
+            <select id="pfProject" class="pf-select" aria-label="Filter by solution">
+              <option value="all">All Solutions</option>
+              <option value="fence">Electric Fence</option>
+            </select>
+          </div>
+
+          <div class="pf-field">
+            <label class="pf-label" for="pfLocation">Location</label>
+            <select id="pfLocation" class="pf-select" aria-label="Filter by location">
+              <option value="all">All Locations</option>
+              <option value="metro">Metro Manila</option>
+              <option value="prov">Provincial</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="portfolio__sort-wrap">
+          <button id="pfSort" class="pf-sort-btn" type="button" aria-pressed="true" aria-label="Toggle sort order by date">
+            <span class="pf-sort-icon" aria-hidden="true">⇅</span>
+            <span class="pf-sort-text">Sort: Newest</span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <div class="portfolio__grid" id="portfolio-grid" aria-live="polite">
+      <!-- Static crawlable portfolio items for search engine indexation before JavaScript enhancement -->
+      <article class="pf-card" tabindex="0" role="button" aria-haspopup="dialog" aria-label="Electric Fence at Bagbag, Novaliches. View project case study and images." data-project="fence" data-date="2022" data-loc="metro" data-title="Electric Fence at Bagbag, Novaliches" data-tags="Electric Fence • Metro Manila" data-desc="Bagbag is a residential community in Novaliches, Philippines. We designed and implemented an electric fence system to enhance the security of the area.">
+        <div class="pf-card__media">
+          <img class="pf-card__img" src="images/bag-bag-novaliches-qc-(4-lines)/image001.jpg" alt="Electric Fence installation at Bagbag, Novaliches, Metro Manila" loading="lazy" decoding="async" />
+        </div>
+        <div class="pf-card__content">
+          <div class="pf-card__meta">
+            <span class="pf-card__cat">Electric Fence</span>
+            <span class="pf-card__sep" aria-hidden="true">·</span>
+            <span class="pf-card__loc">Metro Manila</span>
+          </div>
+          <h3 class="pf-card__title">Electric Fence at Bagbag, Novaliches</h3>
+          <div class="pf-card__action">
+            <span>View case</span><span class="pf-card__arrow" aria-hidden="true">→</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="pf-card" tabindex="0" role="button" aria-haspopup="dialog" aria-label="Electric Fence at Baguio City. View project case study and images." data-project="fence" data-date="2022" data-loc="prov" data-title="Electric Fence at Baguio City" data-tags="Electric Fence • Province" data-desc="A comprehensive 8-line electric fence installation in Baguio City, Philippines' summer capital.">
+        <div class="pf-card__media">
+          <img class="pf-card__img" src="images/baguio-city-(-8-lines)/image001.jpg" alt="8-line electric fence perimeter security installation in Baguio City" loading="lazy" decoding="async" />
+        </div>
+        <div class="pf-card__content">
+          <div class="pf-card__meta">
+            <span class="pf-card__cat">Electric Fence</span>
+            <span class="pf-card__sep" aria-hidden="true">·</span>
+            <span class="pf-card__loc">Provincial</span>
+          </div>
+          <h3 class="pf-card__title">Electric Fence at Baguio City</h3>
+          <div class="pf-card__action">
+            <span>View case</span><span class="pf-card__arrow" aria-hidden="true">→</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="pf-card" tabindex="0" role="button" aria-haspopup="dialog" aria-label="Electric Fence at Cainta, Rizal. View project case study and images." data-project="fence" data-date="2022" data-loc="prov" data-title="Electric Fence at Cainta, Rizal" data-tags="Electric Fence • Province" data-desc="Professional electric fence installation in Cainta, Rizal, providing reliable perimeter protection for residential properties.">
+        <div class="pf-card__media">
+          <img class="pf-card__img" src="images/cainta-rizal/image001.jpg" alt="Perimeter electric fence security installation in Cainta, Rizal" loading="lazy" decoding="async" />
+        </div>
+        <div class="pf-card__content">
+          <div class="pf-card__meta">
+            <span class="pf-card__cat">Electric Fence</span>
+            <span class="pf-card__sep" aria-hidden="true">·</span>
+            <span class="pf-card__loc">Provincial</span>
+          </div>
+          <h3 class="pf-card__title">Electric Fence at Cainta, Rizal</h3>
+          <div class="pf-card__action">
+            <span>View case</span><span class="pf-card__arrow" aria-hidden="true">→</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="pf-card" tabindex="0" role="button" aria-haspopup="dialog" aria-label="8-Line Electric Fence at Cainta, Rizal. View project case study and images." data-project="fence" data-date="2022" data-loc="prov" data-title="8-Line Electric Fence at Cainta, Rizal" data-tags="Electric Fence • Province" data-desc="An upgraded 8-line electric fence system installed in Cainta, Rizal, providing maximum security coverage.">
+        <div class="pf-card__media">
+          <img class="pf-card__img" src="images/cainta-rizal-(8-lines)/image001.jpg" alt="8-line electric fence system on perimeter wall in Cainta, Rizal" loading="lazy" decoding="async" />
+        </div>
+        <div class="pf-card__content">
+          <div class="pf-card__meta">
+            <span class="pf-card__cat">Electric Fence</span>
+            <span class="pf-card__sep" aria-hidden="true">·</span>
+            <span class="pf-card__loc">Provincial</span>
+          </div>
+          <h3 class="pf-card__title">8-Line Electric Fence at Cainta, Rizal</h3>
+          <div class="pf-card__action">
+            <span>View case</span><span class="pf-card__arrow" aria-hidden="true">→</span>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <nav class="portfolio__pager" aria-label="Project pages"></nav>
+  </div>
+</section>

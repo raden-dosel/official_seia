@@ -1,0 +1,176 @@
+<section class="contact-section">
+  <div class="container">
+    <header class="page-header contact-header">
+      <div class="contact-header__kicker">Direct Contractor Consultation</div>
+      <h2 class="contact-header__title">Request a Site Assessment &amp; Inquiry</h2>
+      <p class="lede">Schedule an on-site perimeter evaluation or discuss your electric fence and gate automation needs directly with lead installer Sherwin Madrid.</p>
+    </header>
+
+    <div class="contact-grid">
+      <!-- Left Column: Direct Communication & Trust Factors -->
+      <aside class="contact-info" aria-labelledby="contact-info-title">
+        <h3 id="contact-info-title" class="sr-only">Contact and Consultation Details</h3>
+
+        <div class="card contact-card">
+          <h3 class="card-title">Direct Contact Channels</h3>
+          <p class="card-subtitle">Connect directly with installer for immediate questions or assessment scheduling:</p>
+          <div class="contact-methods">
+            <a href="tel:+639770159162" class="contact-method" aria-label="Call or text mobile at 0977 015 9162">
+              <span class="contact-icon" aria-hidden="true">📱</span>
+              <div class="contact-details">
+                <span class="contact-label">Call / SMS Mobile</span>
+                <span class="contact-value">0977 015 9162</span>
+              </div>
+            </a>
+            <a href="mailto:sherwinmadrid210@gmail.com" class="contact-method" aria-label="Send direct email to sherwinmadrid210@gmail.com">
+              <span class="contact-icon" aria-hidden="true">✉️</span>
+              <div class="contact-details">
+                <span class="contact-label">Direct Email</span>
+                <span class="contact-value">sherwinmadrid210@gmail.com</span>
+              </div>
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=100088409341712" target="_blank" rel="noopener noreferrer" class="contact-method" aria-label="Visit Facebook Profile">
+              <span class="contact-icon" aria-hidden="true">👍</span>
+              <div class="contact-details">
+                <span class="contact-label">Facebook Profile</span>
+                <span class="contact-value">SEIA Security Installation</span>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="card trust-card">
+          <h3 class="card-title">What to Expect</h3>
+          <ul class="trust-commitments">
+            <li class="trust-item">
+              <span class="trust-icon" aria-hidden="true">⚡</span>
+              <div class="trust-text">
+                <strong class="trust-label">Prompt Response</strong>
+                <p>Inquiries reviewed and answered within 1 business day.</p>
+              </div>
+            </li>
+            <li class="trust-item">
+              <span class="trust-icon" aria-hidden="true">📍</span>
+              <div class="trust-text">
+                <strong class="trust-label">Coverage Area</strong>
+                <p>On-site visits in Metro Manila, Rizal, Cavite, Laguna, Bulacan & nearby provinces.</p>
+              </div>
+            </li>
+            <li class="trust-item">
+              <span class="trust-icon" aria-hidden="true">🛡️</span>
+              <div class="trust-text">
+                <strong class="trust-label">Zero Obligation</strong>
+                <p>Initial survey, technical measurements, and itemized quotations provided upfront.</p>
+              </div>
+            </li>
+            <li class="trust-item">
+              <span class="trust-icon" aria-hidden="true">🔒</span>
+              <div class="trust-text">
+                <strong class="trust-label">Client Privacy</strong>
+                <p>Your property address and contact details are kept strictly private and never shared.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </aside>
+
+      <!-- Right Column: Inquiry / Assessment Form -->
+      <section class="contact-form-section" aria-labelledby="contact-form-heading">
+        <h3 id="contact-form-heading" class="sr-only">Project Inquiry and Site Assessment Form</h3>
+
+        <div class="card form-card">
+          <div class="form-card__header">
+            <h3 class="form-card__title">Send an Inquiry or Schedule a Site Visit</h3>
+            <p class="form-card__desc">Provide your project details below. We will follow up to discuss site requirements and schedule your consultation.</p>
+          </div>
+
+          <!-- Dynamic Success Card (revealed upon successful submission) -->
+          <div id="form-success-card" class="form-success-card" hidden role="status" aria-live="polite" tabindex="-1">
+            <div class="success-icon" aria-hidden="true">✓</div>
+            <h4 class="success-title">Inquiry Submitted Successfully!</h4>
+            <p class="success-body">
+              Thank you, <strong id="success-client-name">there</strong>. Your inquiry has been sent to installer Sherwin Madrid. We will review your property requirements and contact you via phone or email within 1 business day.
+            </p>
+            <div class="success-actions">
+              <button type="button" id="btn-send-another" class="btn btn--secondary">
+                Submit Another Inquiry
+              </button>
+            </div>
+          </div>
+
+          <!-- Contact / Assessment Form -->
+          <form id="contact-form" novalidate>
+            <!-- Web3Forms Access Key -->
+            <input type="hidden" name="access_key" value="bfabff6e-9aca-412a-9fdf-66173ad55cd4">
+            <!-- Anti-Spam Honeypot: must remain empty -->
+            <input type="checkbox" name="botcheck" class="hp" style="display: none;" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+            <div class="form-row">
+              <div class="field">
+                <label for="name">Full Name <span class="req" aria-hidden="true">*</span></label>
+                <input id="name" name="name" type="text" required minlength="2" maxlength="100" autocomplete="name" placeholder="Juan Dela Cruz" aria-describedby="err-name" />
+                <small id="err-name" class="error" data-for="name" role="alert" aria-live="polite"></small>
+              </div>
+
+              <div class="field">
+                <label for="email">Email Address <span class="req" aria-hidden="true">*</span></label>
+                <input id="email" name="email" type="email" required inputmode="email" autocomplete="email" placeholder="name@example.com" aria-describedby="err-email" />
+                <small id="err-email" class="error" data-for="email" role="alert" aria-live="polite"></small>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="field">
+                <label for="phone">Phone / Mobile <span class="optional-label">(Recommended for site visit)</span></label>
+                <input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" maxlength="30" placeholder="0977 000 0000" aria-describedby="err-phone" />
+                <small id="err-phone" class="error" data-for="phone" role="alert" aria-live="polite"></small>
+              </div>
+
+              <div class="field">
+                <label for="service">Service of Interest <span class="req" aria-hidden="true">*</span></label>
+                <div class="select-wrap">
+                  <select id="service" name="service" required aria-describedby="err-service">
+                    <option value="Site Assessment">Request a Site Assessment (Perimeter Survey)</option>
+                    <option value="Electric Fence Installation">Electric Fence Installation</option>
+                    <option value="Automatic Gate System">Automatic Gate Automation</option>
+                    <option value="Maintenance & Repair">Maintenance, Energizer Inspection & Repair</option>
+                    <option value="General Inquiry">General Project Inquiry / Other</option>
+                  </select>
+                </div>
+                <small id="err-service" class="error" data-for="service" role="alert" aria-live="polite"></small>
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="location">Property Location / City <span class="optional-label">(Optional)</span></label>
+              <input id="location" name="location" type="text" maxlength="100" placeholder="e.g. Quezon City, Antipolo, Cavite, Taguig..." aria-describedby="err-location" />
+              <small id="err-location" class="error" data-for="location" role="alert" aria-live="polite"></small>
+            </div>
+
+            <div class="field">
+              <label for="message">Project Details / Requirements <span class="req" aria-hidden="true">*</span></label>
+              <textarea id="message" name="message" required minlength="10" maxlength="2000" rows="5" placeholder="Please describe your property type (residential, commercial, industrial), perimeter length, wall or gate type, or specific security concerns..." aria-describedby="err-message"></textarea>
+              <div class="field-footer">
+                <small id="err-message" class="error" data-for="message" role="alert" aria-live="polite"></small>
+                <span id="char-counter" class="char-counter" aria-hidden="true">0 / 2000</span>
+              </div>
+            </div>
+
+            <div class="actions">
+              <button id="submit-btn" type="submit" class="btn btn--primary">
+                <span class="spinner" aria-hidden="true"></span>
+                <span class="btn-label">Submit Assessment Request</span>
+              </button>
+              <p id="form-feedback" class="feedback" role="status" aria-live="polite"></p>
+            </div>
+
+            <div class="form-privacy-note">
+              <span class="privacy-icon" aria-hidden="true">🔒</span>
+              <span class="privacy-text">Your contact details are encrypted in transit and used solely to respond to your inquiry. No promotional spam.</span>
+            </div>
+          </form>
+        </div>
+      </section>
+    </div>
+  </div>
+</section>

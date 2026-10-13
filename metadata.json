@@ -1,0 +1,6 @@
+{
+  "name": "SEIA Security Installation Services",
+  "description": "Professional electric fence installations and automatic gate systems portfolio and contact website.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
